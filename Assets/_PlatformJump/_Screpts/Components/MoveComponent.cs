@@ -4,7 +4,7 @@ using UnityEngine;
 public class MoveComponent : MonoBehaviour
 {
     [SerializeField] private RectTransform _transform;
-    [SerializeField] private RectTransform _movePoint;
+    [SerializeField] private Transform _movePoint;
 
     public void MovePosition()
     {
