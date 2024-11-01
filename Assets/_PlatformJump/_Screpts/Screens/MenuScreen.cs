@@ -14,5 +14,10 @@ namespace _PlatformJump._Screpts
             _moveCloudOne.MovePosition();
             _moveCloudTwo.MovePosition();
         }
+
+        public void ShowSettingsScreen()
+        {
+            Dialog.ShowSettingsScreen();
+        }
     }
 }

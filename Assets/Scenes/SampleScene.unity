@@ -295,6 +295,7 @@ GameObject:
   - component: {fileID: 1190796460}
   - component: {fileID: 1190796459}
   - component: {fileID: 1190796458}
+  - component: {fileID: 1190796462}
   m_Layer: 5
   m_Name: Screens
   m_TagString: Untagged
@@ -385,6 +386,21 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1190796462
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1190796457}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc0207e52559c244598edf8b7088940b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _loaderScreen: {fileID: 4363410661726023105, guid: b1c283a7aabca134d8177c9586d341ef, type: 3}
+  _menuScreen: {fileID: 1017250928403956428, guid: b5f00c3be5329124f94773f9c180309b, type: 3}
+  _settingsScreen: {fileID: 3290064085290249804, guid: f8f8313786a80f148ba13a5f704e136a, type: 3}
 --- !u!1 &1507388282
 GameObject:
   m_ObjectHideFlags: 0
