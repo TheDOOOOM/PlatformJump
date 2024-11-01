@@ -1,12 +1,17 @@
 using System;
+using Screens;
 using UnityEngine;
 
 namespace _PlatformJump._Screpts
 {
-    public class LoadingWindow : MonoBehaviour
+    public class LoadingWindow : BaseScreen
     {
         [SerializeField] private RotationComponent _rotationComponent;
 
-        private void Start() => _rotationComponent.StartAnimation();
+        public override void Init()
+        {
+            base.Init();
+            _rotationComponent.StartAnimation();
+        }
     }
 }

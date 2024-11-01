@@ -1,15 +1,14 @@
 using System.Collections.Generic;
+using Screens;
 using UnityEngine;
 
-public class SettingsScreen : MonoBehaviour
+public class SettingsScreen : BaseScreen
 {
     [SerializeField] private List<MoveComponent> _moveComponents;
 
-    private void Start() => Init();
-
-
-    public void Init()
+    public override void Init()
     {
+        base.Init();
         _moveComponents.ForEach(component => component.MovePosition());
     }
 }
