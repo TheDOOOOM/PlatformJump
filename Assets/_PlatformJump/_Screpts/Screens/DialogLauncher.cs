@@ -1,4 +1,5 @@
 using _PlatformJump._Screpts;
+using _PlatformJump._Screpts.Screens;
 using _PlatformJump._Screpts.Screens.Settings;
 using Screens;
 using Services;
@@ -9,9 +10,11 @@ public class DialogLauncher : MonoBehaviour, IService
     [SerializeField] private LoadingWindow _loaderScreen;
     [SerializeField] private MenuScreen _menuScreen;
     [SerializeField] private SettingsScreen _settingsScreen;
+    [SerializeField] private SelectLevelScreen _selectLevelScreen;
+    [SerializeField] private AchigmentsScreen _achigmentsScreen;
+    [SerializeField] private AudioManager _audioManager;
     // [SerializeField] private GameScreen _gameScreen;
 
-    // [SerializeField] private AudioManager _audioManager;
 
     private BaseScreen _activeScreen;
 
@@ -19,18 +22,18 @@ public class DialogLauncher : MonoBehaviour, IService
     {
         ServiceLocator.Init();
         ServiceLocator.Instance.AddService(this);
+        ServiceLocator.Instance.AddService(_audioManager);
     }
 
     private void Start() => ShowScreen(_loaderScreen);
 
     public void ShowMenuScreen() => ShowScreen(_menuScreen);
 
-    //
-    // public void ShowBackgroundScreen() => ShowScreen(_backgroundScreen);
-    //
-    // public void ShowEnhancementScreen() => ShowScreen(_enhancementScreen);
-    //
+    public void ShowSelectLevel() => ShowScreen(_selectLevelScreen);
+
     public void ShowSettingsScreen() => ShowScreen(_settingsScreen);
+
+    public void ShowAchigmentsScreen() => ShowScreen(_achigmentsScreen);
     //
     // public void ShowGameScreen() => ShowScreen(_gameScreen);
 

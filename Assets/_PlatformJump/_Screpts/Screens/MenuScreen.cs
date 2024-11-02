@@ -17,7 +17,26 @@ namespace _PlatformJump._Screpts
 
         public void ShowSettingsScreen()
         {
+            AudioManager.PlayButtonClick();
             Dialog.ShowSettingsScreen();
+        }
+
+        public void ShowScreenSelect()
+        {
+            AudioManager.PlayButtonClick();
+            Dialog.ShowSelectLevel();
+        }
+
+        public void ShowAchigmentsScreen()
+        {
+            AudioManager.PlayButtonClick();
+            Dialog.ShowAchigmentsScreen();
+        }
+
+        public void CloseApp()
+        {
+            AudioManager.PlayButtonClick();
+            Application.Quit();
         }
     }
 }

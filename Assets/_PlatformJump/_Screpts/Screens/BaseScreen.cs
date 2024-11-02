@@ -6,12 +6,12 @@ namespace Screens
     public abstract class BaseScreen : MonoBehaviour
     {
         protected DialogLauncher Dialog;
-        //  protected AudioManager _audioManager;
+        protected AudioManager AudioManager;
 
         public virtual void Init()
         {
             Dialog = ServiceLocator.Instance.GetService<DialogLauncher>();
-            //     _audioManager = ServiceLocator.Instance.GetService<AudioManager>();
+            AudioManager = ServiceLocator.Instance.GetService<AudioManager>();
         }
 
         public virtual void Сlose() => Destroy(gameObject);
