@@ -2023,8 +2023,28 @@ PrefabInstance:
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 4923116763591924124, guid: 3688a7d52c74ab64eb1883b8b4d56887, type: 3}
-      propertyPath: m_BodyType
-      value: 0
+      propertyPath: m_LinearDrag
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4923116763591924124, guid: 3688a7d52c74ab64eb1883b8b4d56887, type: 3}
+      propertyPath: m_AngularDrag
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4923116763591924124, guid: 3688a7d52c74ab64eb1883b8b4d56887, type: 3}
+      propertyPath: m_GravityScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7881326828801567975, guid: 3688a7d52c74ab64eb1883b8b4d56887, type: 3}
+      propertyPath: _transitionSpeed
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7881326828801567975, guid: 3688a7d52c74ab64eb1883b8b4d56887, type: 3}
+      propertyPath: _gravityStrengthUp
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 7881326828801567975, guid: 3688a7d52c74ab64eb1883b8b4d56887, type: 3}
+      propertyPath: _gravityStrengthDown
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 8147627385719433158, guid: 3688a7d52c74ab64eb1883b8b4d56887, type: 3}
       propertyPath: m_LocalPosition.x

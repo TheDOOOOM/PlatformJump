@@ -4,15 +4,20 @@ using UnityEngine;
 
 public class PlayerMove : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private Rigidbody2D _rigidbody;
+    [SerializeField] private float _jumpForce;
+    [SerializeField] private float _speed;
+
+    public void Jump()
     {
+        if (_rigidbody.velocity.y != 0)
+            return;
         
+        _rigidbody.AddForce(Vector2.up * _jumpForce, ForceMode2D.Impulse);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void MoveDirection(Vector2 direction)
     {
-        
+        _rigidbody.AddForce(direction * _speed * Time.fixedDeltaTime, ForceMode2D.Force);
     }
 }
