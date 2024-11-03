@@ -33,6 +33,12 @@ namespace _PlatformJump._Screpts
             Dialog.ShowAchigmentsScreen();
         }
 
+        public void ShowGameScren()
+        {
+            AudioManager.PlayButtonClick();
+            Dialog.ShowGameScreen();
+        }
+
         public void CloseApp()
         {
             AudioManager.PlayButtonClick();

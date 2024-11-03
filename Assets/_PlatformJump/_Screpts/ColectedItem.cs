@@ -1,8 +1,15 @@
+using System;
+using Services;
 using UnityEngine;
 
 public class ColectedItem : MonoBehaviour
 {
-    [SerializeField] private CollectionCounter _collectionCounter;
+     private CollectionCounter _collectionCounter;
+
+    private void Start()
+    {
+        _collectionCounter = ServiceLocator.Instance.GetService<CollectionCounter>();
+    }
 
     private void OnTriggerEnter2D(Collider2D other)
     {

@@ -13,7 +13,8 @@ public class DialogLauncher : MonoBehaviour, IService
     [SerializeField] private SelectLevelScreen _selectLevelScreen;
     [SerializeField] private AchigmentsScreen _achigmentsScreen;
     [SerializeField] private AudioManager _audioManager;
-    // [SerializeField] private GameScreen _gameScreen;
+    [SerializeField] private GameScreen _gameScreen;
+    [SerializeField] private CameraFollow _cameraFollow;
 
 
     private BaseScreen _activeScreen;
@@ -23,6 +24,7 @@ public class DialogLauncher : MonoBehaviour, IService
         ServiceLocator.Init();
         ServiceLocator.Instance.AddService(this);
         ServiceLocator.Instance.AddService(_audioManager);
+        ServiceLocator.Instance.AddService(_cameraFollow);
     }
 
     private void Start() => ShowScreen(_loaderScreen);
@@ -34,8 +36,7 @@ public class DialogLauncher : MonoBehaviour, IService
     public void ShowSettingsScreen() => ShowScreen(_settingsScreen);
 
     public void ShowAchigmentsScreen() => ShowScreen(_achigmentsScreen);
-    //
-    // public void ShowGameScreen() => ShowScreen(_gameScreen);
+    public void ShowGameScreen() => ShowScreen(_gameScreen);
 
 
     private void ShowScreen(BaseScreen screen)
