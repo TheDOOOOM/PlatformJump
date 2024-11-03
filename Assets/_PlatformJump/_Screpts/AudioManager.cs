@@ -33,6 +33,18 @@ public class AudioManager : MonoBehaviour, IService
         _buttonSound.Play();
     }
 
+    public void PlayMenuMusick()
+    {
+        _menuSource.Play();
+        _gameSource.Stop();
+    }
+
+    public void PlayGame()
+    {
+        _menuSource.Stop();
+        _gameSource.Play();
+    }
+
     private void SetSoundValue()
     {
         _gameSource.volume = _sounConfig.ValueMusick;

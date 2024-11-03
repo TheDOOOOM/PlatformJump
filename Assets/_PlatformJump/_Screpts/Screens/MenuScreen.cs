@@ -13,6 +13,7 @@ namespace _PlatformJump._Screpts
             base.Init();
             _moveCloudOne.MovePosition();
             _moveCloudTwo.MovePosition();
+            AudioManager.PlayMenuMusick();
         }
 
         public void ShowSettingsScreen()

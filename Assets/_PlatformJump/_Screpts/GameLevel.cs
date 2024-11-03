@@ -17,4 +17,9 @@ public class GameLevel : MonoBehaviour
 
     public Transform GameEndPoint => _gameAndPoint;
     public PlayerInstance Player => _player;
+
+    public void Destroy()
+    {
+        Destroy(gameObject);
+    }
 }

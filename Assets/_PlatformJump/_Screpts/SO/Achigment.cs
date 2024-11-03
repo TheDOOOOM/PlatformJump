@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 namespace _PlatformJump._Screpts.SO
 {
@@ -16,6 +17,11 @@ namespace _PlatformJump._Screpts.SO
         public void Complited()
         {
             _status = true;
+        }
+
+        public void Reset()
+        {
+            _status = false;
         }
     }
 }

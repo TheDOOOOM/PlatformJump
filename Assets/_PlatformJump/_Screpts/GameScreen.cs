@@ -32,6 +32,7 @@ public class GameScreen : BaseScreen
         SetMovementButtonPlauer();
         AddSubscription();
         base.Init();
+        AudioManager.PlayGame();
     }
 
     private void CreateStats()
@@ -62,6 +63,9 @@ public class GameScreen : BaseScreen
         var gameOverInstance = Instantiate(_gameOverScreen, transform);
         gameOverInstance.Init(_levelsData, _levelStats);
         _gameLevelinstance.Player.DelitedPlayer();
+        _gameLevelinstance.Destroy();
+        CheckCompliteAchigment();
+        AudioManager.PlayMenuMusick();
     }
 
     private void CheckCompliteAchigment()
@@ -85,8 +89,6 @@ public class GameScreen : BaseScreen
         {
             _achigmentManager.PerfectPathComplited();
         }
-        
-        
     }
 
     public override void Сlose()

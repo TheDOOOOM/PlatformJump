@@ -45,4 +45,9 @@ public class AchigmentManager : MonoBehaviour, IService
     {
         _achigments[2].Complited();
     }
+
+    public void ResetAll()
+    {
+        _achigments.ForEach(e => e.Reset());
+    }
 }
