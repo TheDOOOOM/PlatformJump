@@ -8,6 +8,7 @@ public class LevelsData : ScriptableObject
     [SerializeField] private LevelConfig _defaultConfig;
 
     private LevelConfig _activeLevel;
+    public LevelConfig LevelConfig => _activeLevel;
 
     public void SetLevel(int index)
     {
@@ -22,5 +23,10 @@ public class LevelsData : ScriptableObject
         }
 
         return _activeLevel;
+    }
+
+    public List<LevelConfig> GetLevels()
+    {
+        return _levelsConfigs;
     }
 }

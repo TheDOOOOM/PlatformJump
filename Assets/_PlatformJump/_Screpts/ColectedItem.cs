@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class ColectedItem : MonoBehaviour
 {
-     private CollectionCounter _collectionCounter;
+    private CollectionCounter _collectionCounter;
 
-    private void Start()
+    public void SetColectionCounter(CollectionCounter collectionCounter)
     {
-        _collectionCounter = ServiceLocator.Instance.GetService<CollectionCounter>();
+        _collectionCounter = collectionCounter;
     }
 
     private void OnTriggerEnter2D(Collider2D other)

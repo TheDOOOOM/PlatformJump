@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 3528612253308439758}
   - component: {fileID: 4923116763591924124}
   - component: {fileID: 7881326828801567975}
+  - component: {fileID: 818121885804539044}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -182,3 +183,23 @@ MonoBehaviour:
   _gravityStrengthUp: 20
   _gravityStrengthDown: 20
   _transitionSpeed: 5
+--- !u!114 &818121885804539044
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4107045352721656343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 285235cb3a79d5a46a585e0c5e8b437a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _topCollisionSprite: {fileID: 21300000, guid: 4f732114d5b13364a817a3c909877e71, type: 3}
+  _bottomCollisionSprite: {fileID: 21300000, guid: bde439b0b9039fe4f8966ba664600c0c, type: 3}
+  _leftMovementSprite: {fileID: 21300000, guid: 781556f2f905f2b4c971f9e639fac295, type: 3}
+  _rightMovementSprite: {fileID: 21300000, guid: 4da03f3be801cc548a129d120cd5438c, type: 3}
+  _jumpSprite: {fileID: 21300000, guid: 781556f2f905f2b4c971f9e639fac295, type: 3}
+  _spriteRenderer: {fileID: 4110713320902762200}
+  _rigidbody2D: {fileID: 4923116763591924124}
+  _jumpThreshold: 0.1

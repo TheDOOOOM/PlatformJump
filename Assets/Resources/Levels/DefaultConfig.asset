@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: DefaultConfig
   m_EditorClassIdentifier: 
   _levelPrefab: {fileID: 4507724872005024537, guid: af616d7b507b3634dad5263b7b6f18e2, type: 3}
-  _jumpMaximum: 20
-  _colectbleItems: 11
-  _minimumScore: 100
+  _jumpMaximum: 10
+  _maximumSwitch: 3
+  _minimumScore: 50
+  _stars: 0
+  _levelIndex: 0

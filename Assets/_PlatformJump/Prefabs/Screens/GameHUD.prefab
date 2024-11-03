@@ -52,7 +52,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0aeb490af7852bb409e94aae628e563c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _gameLevel: {fileID: 4507724872005024537, guid: af616d7b507b3634dad5263b7b6f18e2, type: 3}
+  _levelsData: {fileID: 11400000, guid: e3d47bac575e4084e98052a9bcdd9b9e, type: 2}
   _distanceCounter: {fileID: 8021581045640978607}
   _gravityImage: {fileID: 4256556501991686550}
   _moveLeft: {fileID: 229992034529487782}
@@ -60,6 +60,7 @@ MonoBehaviour:
   _gravitySwitch: {fileID: 821357737011737507}
   _jumpButton: {fileID: 6118267727819108583}
   _collectionCounter: {fileID: 2608327496581775711}
+  _gameOverScreen: {fileID: 7635891830195680825, guid: b391e2d40bd842c428b9e95cf1fff372, type: 3}
 --- !u!1 &287059908251172775
 GameObject:
   m_ObjectHideFlags: 0

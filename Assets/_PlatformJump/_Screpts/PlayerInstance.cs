@@ -11,10 +11,15 @@ public class PlayerInstance : MonoBehaviour
 
     public PlayerMove InitStabncePlayer()
     {
-        var playerMove = Instantiate(_playerPrefab);
+        _playerMove = Instantiate(_playerPrefab);
         _cameraFollow = ServiceLocator.Instance.GetService<CameraFollow>();
-        playerMove.transform.position = _instancePoint.position;
-        _cameraFollow.SetTarget(playerMove.transform);
-        return playerMove;
+        _playerMove.transform.position = _instancePoint.position;
+        _cameraFollow.SetTarget(_playerMove.transform);
+        return _playerMove;
+    }
+
+    public void DelitedPlayer()
+    {
+        Destroy(_playerMove.gameObject);
     }
 }

@@ -15,6 +15,7 @@ public class DialogLauncher : MonoBehaviour, IService
     [SerializeField] private AudioManager _audioManager;
     [SerializeField] private GameScreen _gameScreen;
     [SerializeField] private CameraFollow _cameraFollow;
+    [SerializeField] private AchigmentManager _achigmentManager;
 
 
     private BaseScreen _activeScreen;
@@ -25,6 +26,7 @@ public class DialogLauncher : MonoBehaviour, IService
         ServiceLocator.Instance.AddService(this);
         ServiceLocator.Instance.AddService(_audioManager);
         ServiceLocator.Instance.AddService(_cameraFollow);
+        ServiceLocator.Instance.AddService(_achigmentManager);
     }
 
     private void Start() => ShowScreen(_loaderScreen);
