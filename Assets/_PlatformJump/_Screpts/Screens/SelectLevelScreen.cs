@@ -22,6 +22,7 @@ namespace _PlatformJump._Screpts.Screens
 
         public void BackMenu()
         {
+            AudioManager.PlayButtonClick();
             Dialog.ShowMenuScreen();
         }
     }

@@ -19,6 +19,7 @@ public class AchigmentsScreen : BaseScreen
 
     public void BackMenu()
     {
+        AudioManager.PlayButtonClick();
         Dialog.ShowMenuScreen();
     }
 }

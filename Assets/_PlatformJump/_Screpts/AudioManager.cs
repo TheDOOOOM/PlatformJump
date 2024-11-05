@@ -21,11 +21,14 @@ public class AudioManager : MonoBehaviour, IService
     public void SetMusick(float value)
     {
         _sounConfig.SetMuscikValue(value);
+        _gameSource.volume = value;
+        _menuSource.volume = value;
     }
 
     public void SetSound(float value)
     {
         _sounConfig.SetMuscikValue(value);
+        _buttonSound.volume = value;
     }
 
     public void PlayButtonClick()
