@@ -13,6 +13,10 @@ public class DestroyPlatform : MonoBehaviour
     {
         if (other.TryGetComponent(out PlayerMove playerMove))
         {
+            if (_boxCollider == null)
+            {
+                return;
+            }
             _boxCollider.isTrigger = false;
             StartDestroy();
         }
@@ -26,7 +30,7 @@ public class DestroyPlatform : MonoBehaviour
             _spriteRenderer.sprite = _destroySprite;
             await Task.Delay(delay);
             _iDestroy = true;
-            Destroy(gameObject);
+          //  gameObject.SetActive(false);
         }
     }
 }

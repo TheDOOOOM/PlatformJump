@@ -24,7 +24,7 @@ public class GameScreen : BaseScreen
     public override void Init()
     {
         _achigmentManager = ServiceLocator.Instance.GetService<AchigmentManager>();
-        _gameLevelinstance = Instantiate(_levelsData.LevelConfig.GameLevel);
+        _gameLevelinstance = Instantiate(_levelsData.GetLevelConfig().GetLevelPrefab());
         _gameLevelinstance.SetCounter(_collectionCounter);
         _playerMove = _gameLevelinstance.Player.InitStabncePlayer();
         _distanceCounter.SetData(_gameLevelinstance.GameEndPoint, _playerMove.transform);
@@ -59,7 +59,7 @@ public class GameScreen : BaseScreen
 
     private void GameOverScreenOpen()
     {
-        _levelsData.LevelConfig.SetStars(_levelStats.Jumps, _levelStats.GrawvitySwitch, _levelStats.Score);
+        _levelsData.GetLevelConfig().SetStars(_levelStats.Jumps, _levelStats.GrawvitySwitch, _levelStats.Score);
         var gameOverInstance = Instantiate(_gameOverScreen, transform);
         gameOverInstance.Init(_levelsData, _levelStats);
         _gameLevelinstance.Player.DelitedPlayer();

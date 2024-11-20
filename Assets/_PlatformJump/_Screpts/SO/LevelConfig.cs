@@ -14,6 +14,11 @@ public class LevelConfig : ScriptableObject
     public int LevelIndex => _levelIndex;
     public GameLevel GameLevel => _levelPrefab;
 
+    public GameLevel GetLevelPrefab()
+    {
+        return _levelPrefab;
+    }
+
     public void SetStars(int jumps, int switchMaximum, int score)
     {
         if (_stars >= 3)

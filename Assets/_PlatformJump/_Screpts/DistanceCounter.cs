@@ -25,6 +25,11 @@ public class DistanceCounter : MonoBehaviour
         if (_playerTransform == null)
             return;
         GameOver();
+        if (_playerTransform == null)
+        {
+            return;
+        }
+
         float remainingDistance = Vector3.Distance(_playerTransform.position, _endPoint.position);
         _slider.value = _totalDistance - remainingDistance;
     }

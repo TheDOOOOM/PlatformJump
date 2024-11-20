@@ -19,9 +19,9 @@ public class LevelsData : ScriptableObject
     {
         if (_activeLevel == null)
         {
+            _activeLevel = _defaultConfig;
             return _defaultConfig;
         }
-
         return _activeLevel;
     }
 
